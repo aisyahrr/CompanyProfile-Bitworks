@@ -83,7 +83,7 @@ const Home = () => {
             </div>
             <div className='flex justify-around'>
               <div>
-                <img src="/Image/hero.jpeg" alt="" className='w-lg mt-5  bg-white shadow-md hover:shadow-lg hover:cursor-pointer rounded-lg bg-Second p-8' />
+                <img src="/Image/hero.jpeg" alt="" className='w-lg mt-5  bg-white shadow-md hover:shadow-lg hover:cursor-pointer rounded-lg  p-8' />
               </div>
               <div className='text-justify'>
                 <span className='w-xl p-5 flex flex-col'>Bitworks adalah perusahaan teknologi yang berbasis di Indonesia, berdedikasi dalam menciptakan solusi digital inovatif dan efektif untuk berbagai jenis bisnis. Kami percaya bahwa teknologi bukan hanya tentang alat — tetapi tentang bagaimana alat tersebut bisa menciptakan dampak yang nyata.
