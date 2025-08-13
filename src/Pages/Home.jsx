@@ -1,4 +1,6 @@
 import React from 'react'
+import Content from '../Components/Content';
+import { FaInstagram, FaLinkedin, FaGithub } from "react-icons/fa";
 
 const services = [
   {
@@ -19,26 +21,32 @@ const services = [
   },
 ];
 
-const clients = [
+const teamMembers = [
   {
-    icon: '/Image/KAI.png'
+    name: "Aisyah Rahmawati",
+    role: "Front-end Developer",
+    bio: "Worem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.",
+    img: "/Image/hero.jpeg",
   },
   {
-    icon: '/Image/mandiri.png'
+    name: "M. Adha Alfaridzi",
+    role: "Back-end Developer",
+    bio: "Worem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.",
+    img: "/Image/hero.jpeg",
   },
   {
-    icon: '/Image/Gojek.png'
+    name: "M. Arul Andriansyah",
+    role: "Front-end Developer",
+    bio: "Worem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.",
+    img: "/Image/hero.jpeg",
   },
-  {
-    icon: '/Image/BCA.png'
-  }
-]
+];
 
 const Home = () => {
   return (
-    <div className="relative mx-12 my-5 pb-10">
-      <div className="relative">
-        <img src="/Image/hero.jpeg" alt="" className="w-full h-[536px] object-cover" />
+    <div className="relative  mx-12 my-5 pb-10">
+      <div className="relative mb-12">
+        <img src="/Image/hero.jpeg" alt="" className="w-full h-[536px] object-cover rounded-md" />
         <div className="absolute inset-0 bg-black/33"></div>
 
         {/* Card Section */}
@@ -58,44 +66,86 @@ const Home = () => {
           ))}
         </div>
       </div>
-      <div className='relative'>
-        <div className=' text-center mt-[150px] '>
-          <span className='text-3xl font-semibold'>Trusted by several top companies</span>
-        </div>
-        {/* {Card Clients} */}
-        <div className='relative flex justify-center py-10 gap-6 '>
-          {clients.map((client, index) => (
-            <div
-              key={index}
-              className="flex flex-col items-center rounded-lg py-[10px] px-10  bg-white shadow-md hover:shadow-lg hover:cursor-pointer transition"
-            >
-              <img src={client.icon} className="w-27 h-27 mb-2 object-contain" />
-            </div>
-          ))}
-        </div>
-      </div>
-      <div>
-        <div>
-          <div className='mt-[120px]'>
-            <div className='translate-x-10'>
-              <span className='text-5xl'>Get To Know Us</span>
+      <Content/>
+      {/* About */}
+       <div className="mt-10">
+            <div className='justify-center text-center'>
+              <button className="bg-indigo-300 hover:bg-blue-400 text-blue-900 px-10 py-3 rounded-full font-medium mt-15 mb-7">
+                About Bitworks
+              </button>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, rem!</p>
             </div>
-            <div className='flex justify-around'>
-              <div>
-                <img src="/Image/hero.jpeg" alt="" className='w-lg mt-5  bg-white shadow-md hover:shadow-lg hover:cursor-pointer rounded-lg  p-8' />
-              </div>
-              <div className='text-justify'>
-                <span className='w-xl p-5 flex flex-col'>Bitworks adalah perusahaan teknologi yang berbasis di Indonesia, berdedikasi dalam menciptakan solusi digital inovatif dan efektif untuk berbagai jenis bisnis. Kami percaya bahwa teknologi bukan hanya tentang alat — tetapi tentang bagaimana alat tersebut bisa menciptakan dampak yang nyata.
-                  Dengan tim yang terdiri dari engineer, desainer, dan konsultan digital yang berpengalaman, Bitworks telah membantu berbagai perusahaan — dari startup hingga korporasi besar — untuk melakukan transformasi digital, meningkatkan efisiensi operasional, dan menghadirkan pengalaman pengguna yang unggul.
-                  Kami berkomitmen untuk terus berinovasi dan memberikan solusi yang relevan, fungsional, dan scalable.
-                  <button className='w-[180px] mt-5 py-2 bg-gradient-to-r from-Primary to-SecondPrimary text-white hover:cursor-pointer rounded-lg font-semibold text-xl'>Let's Talk</button>
-                </span>
+           <div className="flex justify-center items-start gap-10 mt-10">
+            <div className="w-[500px] h-[350px] rounded-lg shadow-md hover:shadow-lg hover:cursor-pointer overflow-hidden">
+              <img
+                src="/Image/hero.jpeg"
+                alt=""
+                className="w-full h-full object-cover   bg-white shadow-md hover:shadow-lg hover:cursor-pointer rounded-lg p-8 "
+              />
+            </div>
 
-              </div>
+            <div className="text-justify max-w-[500px] ">
+              <p>
+                Bitworks adalah perusahaan teknologi yang berbasis di Indonesia, berdedikasi
+                dalam menciptakan solusi digital inovatif dan efektif untuk berbagai jenis bisnis.
+                Kami percaya bahwa teknologi bukan hanya tentang alat — tetapi tentang bagaimana
+                alat tersebut bisa menciptakan dampak yang nyata.
+              </p>
+              <p className="mt-3">
+                Dengan tim yang terdiri dari engineer, desainer, dan konsultan digital yang
+                berpengalaman, Bitworks telah membantu berbagai perusahaan — dari startup hingga
+                korporasi besar — untuk melakukan transformasi digital, meningkatkan efisiensi
+                operasional, dan menghadirkan pengalaman pengguna yang unggul.
+              </p>
+              <p className="mt-3">
+                Kami berkomitmen untuk terus berinovasi dan memberikan solusi yang relevan,
+                fungsional, dan scalable.
+              </p>
+              <button className="w-[180px] mt-5 py-2 bg-gradient-to-r from-Primary to-SecondPrimary text-white hover:cursor-pointer rounded-lg font-semibold text-xl">
+                Let's Talk
+              </button>
             </div>
           </div>
         </div>
+      {/* Team */}\
+      <div className='mt-10 '>
+        <div className='justify-center text-center'>
+          <button className="bg-indigo-300 hover:bg-blue-400 text-blue-900 px-10 py-3 rounded-full font-medium mt-15 mb-7">
+            Our Team
+          </button>
+          <p>Worem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.</p>
+        </div>
+          <div className="flex justify-center font-Primary gap-6 flex-wrap mt-7">
+            {teamMembers.map((member, index) => (
+              <div
+                key={index}
+                className="bg-white rounded-xl shadow-md hover:shadow-lg w-[300px] overflow-hidden"
+              >
+                {/* Gambar */}
+                <div className="w-full h-[210px] p-3 ">
+                  <img
+                    src={member.img}
+                    alt={member.name}
+                    className="w-full h-full object-cover rounded-md"
+                  />
+                </div>
+
+                {/* Info */}
+                <div className="p-5 text-left">
+                  <h3 className="font-semibold text-lg text-gray-800">{member.name}</h3>
+                  <p className="text-sm text-gray-500">{member.role}</p>
+                  <p className="mt-3 text-sm text-gray-600">{member.bio}</p>
+
+                  {/* Icons */}
+                  <div className="flex justify-start gap-4 mt-4 text-gray-500">
+                    <FaInstagram className="hover:text-pink-600 cursor-pointer" />
+                    <FaLinkedin className="hover:text-sky-600 cursor-pointer" />
+                    <FaGithub className="hover:text-gray-800 cursor-pointer" />
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
       </div>
     </div>
   );
