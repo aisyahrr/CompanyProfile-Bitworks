@@ -7,13 +7,13 @@ const Navbar = () => {
   const [openDropdown, setOpenDropdown] = useState(false);
 
   return (
-    <nav className="bg-white shadow-md py-3 px-7 rounded-full max-w-7xl mx-auto mt-5 flex items-center justify-between">
+    <nav className="bg-white shadow-md py-3 px-7 rounded-xl max-w-7xl mx-auto mt-5 flex items-center justify-between">
       <Link to="/" className="flex items-center space-x-2">
-        <img src="/Image/Logo.png" alt="Bitworks Logo" className="h-8" />
-        <span className="font-bold font-Logo text-xl bg-gradient-to-r from-Primary to-SecondPrimary bg-clip-text text-transparent">Bitworks</span>
+        <img src="/Image/Logo.png" alt="Bitworks Logo" className="h-9" />
+        <span className="font-bold font-Logo text-2xl bg-gradient-to-r from-Primary to-SecondPrimary bg-clip-text text-transparent">Bitworks</span>
       </Link>
 
-      <ul className="flex space-x-8 font-semibold text-sm text-black">
+      <ul className="flex space-x-8 font-semibold text-lg text-black">
         <li>
           <Link to="/" className="hover:text-Primary">Home</Link>
         </li>
